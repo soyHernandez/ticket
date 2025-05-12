@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Conference ticket generator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/images/logo-full.svg">
+    <h1 class="tittle">Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <h3 class="subtittle">Secure your spot at next year's biggest coding Conference.</h3>
+  </header>
+    <!-- Form starts -->
+<div class="detail">
+
+</div>
+<div class="detail-2">
+
+</div>
+<div class="detail-3">
+
+</div>
+<div class="detail-4">
+
+</div>
+<form action="" method="post">
+  <label for="avatar">Uplodad avatar</label>
+  <div id="drop-area" class="drop-area">
+    <input type="file" name="avatar" required id="fileElement" accept="image/*" style="display: none;">
+    <button class="btnUptade" id="btnBrowse"><img src="assets/images/icon-upload.svg" alt=""></button>
+    <h3 id="infoText">Drag and drop or click to update</h3>
+    <img id="imgPreview" class="prevImg">
+    <button id="secondBtn">cambiar imagen</button>
+  </div>
+  <div class="info">
+    <img src="assets/images/icon-info.svg">
+    <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+  </div>
+  <label for="name">Full name</label>
+  <input class="inputs" type="text" id="name" name="name" >
+  <label for="Email">Email Address</label>
+  <input class="inputs" type="email" placeholder="YourEmail@example.com" id="email" name="Email" >
+  <label for="userName">Githud Username</label>
+  <input class="inputs" type="text" placeholder="@YourUserName" id="userName" name="userName" >
+  <button type="submit" class="btnSend" id="btnSendInfo">Generate My Ticket</button>
+</form>
+
+  <!-- Form ends -->
+
+  <!-- Generated tickets starts -->
+
+  <!-- Congrats, Full Name! Your ticket is ready. -->
+
+  <!-- We've emailed your ticket to Email Address and will send updates in the run up to the event. -->
+
+  <!-- Coding Conf -->
+  <!-- Jan 31, 2025 / Austin, TX -->
+
+  <!-- Generated tickets ends -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Alejandro Hernandez</a>.
+  </div>
+  <script src="assets/js/dragAndDrop.js"></script>
+  <script src="assets/js/ticket-generate.js"></script>
+</body>
+</html>
