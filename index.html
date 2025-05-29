@@ -16,9 +16,16 @@
 </head>
 <body>
   <header>
-    <img src="assets/images/logo-full.svg">
-    <h1 class="tittle">Your Journey to Coding Conf 2025 Starts Here!</h1>
-    <h3 class="subtittle">Secure your spot at next year's biggest coding Conference.</h3>
+    <div id="textPrincipal">
+      <img class="logo" src="assets/images/logo-full.svg">
+      <h1 class="tittle">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <h3 class="subtittle">Secure your spot at next year's biggest coding Conference.</h3>
+    </div>
+    <div id="finish-text" style="display: none;">
+      <img src="assets/images/logo-full.svg">
+      <h1 class="tittle">Congrats, <p class="ticket-name" id="ticketName">Full Name</p> Your ticket is ready.</h1>
+      <h3 class="subtittle">We've emailed your ticket to <p class="ticket-email" id="ticketEmail">example@gmail.com</p> and will send updates in the run up to the event.</h3>
+    </div>
   </header>
     <!-- Form starts -->
 <div class="detail">
@@ -33,44 +40,68 @@
 <div class="detail-4">
 
 </div>
-<form action="" method="post">
+<form id="formTicket" action="" method="post" >
   <label for="avatar">Uplodad avatar</label>
   <div id="drop-area" class="drop-area">
     <input type="file" name="avatar" required id="fileElement" accept="image/*" style="display: none;">
     <button class="btnUptade" id="btnBrowse"><img src="assets/images/icon-upload.svg" alt=""></button>
     <h3 id="infoText">Drag and drop or click to update</h3>
     <img id="imgPreview" class="prevImg">
-    <button id="secondBtn">cambiar imagen</button>
+    <div class="btn-opt" id="btnContainer">
+      <button id="removeBtn">Remove image</button>
+      <button id="secondBtn">Change image</button>
+    </div>
   </div>
-  <div class="info">
-    <img src="assets/images/icon-info.svg">
+  <div class="info" id="infoImg">
+    <img id="imgInfo" src="assets/images/icon-info.svg">
     <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
   </div>
   <label for="name">Full name</label>
   <input class="inputs" type="text" id="name" name="name" >
+  <div class="info" id="infoUserName" style="display: none;">
+    <img id="imgInfo" src="assets/images/icon-info.svg">
+    <p>The field can't be empty, plese enter a valid name</p>
+  </div>
   <label for="Email">Email Address</label>
   <input class="inputs" type="email" placeholder="YourEmail@example.com" id="email" name="Email" >
+  <div class="info" id="errorEmail" style="display: none;">
+  <img src="assets/images/icon-info.svg">
+  <p>Please enter a valid email address.</p>
+  </div>
   <label for="userName">Githud Username</label>
   <input class="inputs" type="text" placeholder="@YourUserName" id="userName" name="userName" >
+  <div class="info" id="errorUser" style="display: none;">
+    <img src="assets/images/icon-info.svg">
+    <p>Please enter a valid User.</p>
+  </div>
   <button type="submit" class="btnSend" id="btnSendInfo">Generate My Ticket</button>
 </form>
-
-  <!-- Form ends -->
-
-  <!-- Generated tickets starts -->
-
-  <!-- Congrats, Full Name! Your ticket is ready. -->
-
-  <!-- We've emailed your ticket to Email Address and will send updates in the run up to the event. -->
-
-  <!-- Coding Conf -->
-  <!-- Jan 31, 2025 / Austin, TX -->
-
+<!-- Form ends -->
+<div id="containerTicket" class="containerTicket" style="display: none;">
+  <img id="ticketFinal" src="assets/images/pattern-ticket.svg">
+  <img class="ticket-logo" src="assets/images/logo-full.svg">
+  <img id="imgPreview2" class="img-ticket" src="assets/images/image-avatar.jpg">
+  
+  <p class="date">Jan 31, 2025 / Austin, TX</p>
+  <div class="display-info" id="ticketInfo">
+    <p class="fullname-ticket">full name</p>
+    <div class="git" id="gitInfo">
+      <img src="assets/images/icon-github.svg">
+      <p class="githudName">@pepe</p>
+    </div>
+  </div>
+  <p class="serial">#01609</p>
+</div>
   <!-- Generated tickets ends -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Alejandro Hernandez</a>.
+  </div>
+  <script type="module" src="assets/js/dragAndDrop.js"></script>
+  <script type="module" src="assets/js/ticket-generate.js"></script>
+</body>
+</html>
   </div>
   <script src="assets/js/dragAndDrop.js"></script>
   <script src="assets/js/ticket-generate.js"></script>
