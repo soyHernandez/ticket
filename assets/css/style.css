@@ -16,22 +16,32 @@ header{
 }
 header img{
     position: relative;
-    top: 20px;
+    top: 1.5rem;
 }
 .tittle{
-    font-size: 50px;
+    font-size: 3rem;
 }
 .subtittle{
     position: relative;
-    bottom: 15px;
+    bottom: 1rem;
     font-weight: 100;
+}
+.ticket-name{
+    display: inline;
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ticket-email{
+    display: inline;
+    color: hsl(7, 71%, 60%);
 }
 .btnUptade{
     border-radius: 10px;
     background-color: hsla(252, 6%, 83%, 0.356);
     border: 1px hsl(245, 15%, 58%) solid;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: .5rem .7rem;
 }
 .drop-area, .inputs{
     background-color: hsla(252, 6%, 83%, 0.116);
@@ -42,13 +52,13 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px 0;
-    width: 25%;
+    gap: 1rem 0;
+    width: 25rem;
 }
 .btnSend{
     padding: 3% 2%;
     width: 100%;
-    border-radius: 5px;
+    border-radius: .5rem;
     border: none;
     background-color: hsl(7, 88%, 67%);
     cursor: pointer;
@@ -64,9 +74,9 @@ label{
     align-self: start;
 }
 .inputs{
-    padding: 15px 5px;
+    padding: 1rem .5rem;
     width: 100%;
-    border-radius: 5px;
+    border-radius: .5rem;
     border: 1px hsl(245, 15%, 58%) solid;
 }
 .detail{
@@ -115,10 +125,10 @@ label{
     flex-direction: column;
     border: 2px hsl(245, 15%, 58%) dashed;
     width: 100%;
-    height: 150px;
+    height: 12rem;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: .5rem;
 }
 .drop-area h3{
     font-weight: 100;
@@ -129,17 +139,176 @@ label{
     border: none;
 }
 .highlight{
-    background-color: grey;
+    background-color: hsl(245, 15%, 58%);
+}
+.drop-area:focus,form input:focus{
+    outline: solid hsl(245, 15%, 58%);
+}
+.drop-area:hover,form input:hover{
+    background: hsl(245, 15%, 58%);
+}
+form input{
+    color: hsla(0, 0%, 100%, 0.534);
 }
 .info{
     align-self: self-start;
     display: flex;
-    font-size: 12px;
+    font-size: .8rem;
     gap: 0 5px;
     position: relative;
     bottom: 20px;
     font-weight: 100;
 }
 .attribution{
-    margin-top: 50px;
+    margin-top: .5rem;
+}
+.ticket-logo{
+    position: relative;
+    bottom: 16rem;
+    left: 2rem;
+    width: 18rem;
+}
+.date{
+    position: relative;
+    bottom: 22rem;
+    left: 2rem;
+}
+.img-ticket{
+    position: relative;
+    border-radius: 20%;
+    width: 5rem;
+    height: 5rem;
+    bottom: 9rem;
+    left: 2rem;
+}
+.fullname-ticket{
+    font-size: 1.5rem;
+    margin: 0;
+}
+.git{
+    display: flex;
+    flex-direction: row;
+    gap: 0 0.5rem;
+    font-size: 1rem;
+}
+
+.display-info{
+    position: relative;
+    bottom: 16.5rem;
+    left: 9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.serial{
+    writing-mode: vertical-lr;
+    position: relative;
+    bottom: 27rem;
+    left: 31rem;
+    font-size: 2rem;
+    color: hsl(245, 15%, 58%);
+}
+.containerTicket{
+    display: flex;
+    flex-direction: column;
+    width: 38rem;
+    height: 38rem;
+}
+.prevImg{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 1rem;
+}
+.btn-opt{
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0 .5rem;
+}
+.btn-opt button{
+    font-family: 'Inconsolata';
+    color: hsla(0, 0%, 100%, 0.534);
+    background-color: hsla(252, 6%, 83%, 0.356);
+    padding: .3rem;
+    border-radius: 0.1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-opt button:hover{
+    text-decoration-line: underline;
+    
+}
+
+@media (min-width: 100px ) and (max-width: 1080px){
+    form{
+    gap: 1rem 0;
+    width: 20rem;
+    }
+    .tittle{
+        margin-top: 5rem;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    header{
+        width: 95%;
+    }
+
+    .logo{
+        width: 10rem;
+    }
+    .detail-4{
+        top: 5%;
+    }
+    .detail-3{
+        bottom: -20%;
+        width: 80%;
+    }
+    .detail{
+        width: 100%;;
+        height: 50%;
+    }
+    .detail-2{
+        right: -10%;
+    }
+    body{
+    background-image: 
+    url("/assets/images/background-mobile.png");
+}
+.containerTicket {
+    width: 23rem;
+}
+.ticket-logo {
+    bottom: 10rem;
+    width: 10rem;
+}
+.date {
+    bottom: 15rem;
+    width: 70%;
+}
+.fullname-ticket {
+    font-size: 1rem;
+    width: 100%;
+}
+.git {
+    font-size: 1rem;
+}
+.display-info {
+    bottom: 13rem;
+    left: 5.5rem;
+    gap: 0;
+    width: 70%;
+}
+.img-ticket {
+    width: 4rem;
+    height: 4rem;
+    bottom: 6.5rem;
+    left: 1rem;
+}
+.serial {
+    bottom: 19.5rem;
+    left: 19rem;
+    font-size: 1rem;
+    width: 0;
+}
 }
